@@ -19,13 +19,11 @@ def home():
 def analyze():
     data = request.json
     stocks = data['stocks']
-    # Call your stock analysis function here
     result = analysis(stocks)
     return jsonify({'result': result})
 
 @app.route('/trending')
 def trending():
-    # Call your trending analysis function here
     result = trending()
     return jsonify({'result': result})
 
@@ -39,7 +37,7 @@ def analysis(stocks):
             model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": "You are a financial advisor expert."},
-                {"role": "user", "content": f"Analyze these stocks and provide insights: {stocks}"}
+                {"role": "user", "content": f"Analyze these stocks and provide insights based on the future and ROI: {stocks}"}
             ],
             temperature=0.7,
             max_tokens=500
@@ -54,7 +52,7 @@ def trending():
             model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": "You are a financial advisor expert."},
-                {"role": "user", "content": "What are the current trending stocks and why?"}
+                {"role": "user", "content": "What are the current trending stocks and why? Give specifics"}
             ],
             temperature=0.7,
             max_tokens=500
