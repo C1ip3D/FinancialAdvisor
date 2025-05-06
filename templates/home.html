@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Financial Advisor :l </h1>
+    </header>
+
+<form action="/submit" method="post">
+    <input type="text" name="stockName" required>
+</form>
+</body>
+</html>

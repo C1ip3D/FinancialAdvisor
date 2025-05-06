@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(48, 48, 48);
+}
+
+header {
+    min-width: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+
+input{
+}
