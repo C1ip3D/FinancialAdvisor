@@ -13,7 +13,7 @@
       <h1>Financial Advisor</h1>
     </header>
 
-    <form action="/submit" method="post">
+    <form method="post">
       <div class="first">
         <input
           type="text"
@@ -21,11 +21,18 @@
           placeholder="Enter stock name, comma separated"
         />
       </div>
+      <div class="third">
+        <input
+        type="number"
+        name="budget"
+        placeholder="Enter your budget"
+      />
+      </div>
       <div class="second">
         <input
           type="button"
           id="analyzeBtn"
-          value="Generate Analysis on Stocks"
+          value="Generate Analysis"
         />
         <input type="button" id="trendingBtn" value="Find whats trending" />
       </div>

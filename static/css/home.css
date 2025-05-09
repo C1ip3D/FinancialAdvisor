@@ -12,6 +12,7 @@ header {
 h1 {
     text-align: center;
     font-size: 3em;
+    color: white;
 }
 
 form{
@@ -21,8 +22,8 @@ form{
     flex-direction: column;
     padding: 50px;
     line-height: 10rem;
-    width: 100%;       /* changed from min-width to width */
-    box-sizing: border-box;  /* add this to include padding in width calculation */
+    width: 100%;
+    box-sizing: border-box;  
 }
 
 input{
@@ -30,14 +31,26 @@ input{
     border-radius: 8px;
     font-size: 2em;
     min-width: 50%;
+    width: auto;
 }
 
 .second {
     display: flex;
-    padding: 50px;
     gap: 50px;
+    width: 70%;
+}
+
+.second input {
+    max-width: 20%;
 }
 
 input[type='button']{
     min-width: 50%;
+}
+
+.output{
+    color: white;
+    font-size: 2rem;
+    font: 'Segoe UI';
+    text-align: center;
 }
