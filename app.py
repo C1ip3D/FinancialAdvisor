@@ -28,7 +28,7 @@ def get_stock_analysis(stocks, budget):
                 },
                 {
                     "role": "user",
-                    "content": f"Please analyze this stock and provide insights based on the future and ROI. Mention whether it would be short or long term and what kind of returns you predict. Also include in a short sentence talking about the EPS, market cap, P/E Ratio, and Divident yield with a short explanation whether it would be good or bad. Keep the sentences more simple and also include recent news that might negatively affect this stock. You also please tell us how much money in dollars we should invest out of our mentioned ${budget} that we should use for it. Write it in the form of <li> tags from Javascript. Thank you. Make sure not to list out the syntax requirements we gave you and the header in the output.: {stocks}. ",
+                    "content": f"Please analyze this stock from NASDAQ and provide insights based on the future and ROI. Mention whether it would be short or long term and what kind of returns you predict. Also include in a short sentence talking about the EPS, market cap, P/E Ratio, and Divident yield with a short explanation whether it would be good or bad. Keep the sentences more simple and also include recent news that might negatively affect this stock. You also please tell us how much money in dollars we should invest out of our mentioned ${budget} that we should use for it. Write it in the form of <li> tags from Javascript. Thank you. Make sure not to list out the syntax requirements we gave you and the header in the output.: {stocks}. ",
                 },
             ],
             temperature=0.7,
@@ -50,7 +50,7 @@ def get_trending_stocks():
                 },
                 {
                     "role": "user",
-                    "content": "What are future lucrative stocks and why? Only give a bullet point list with short and simple sentences. Give us 3 sections, low, moderate, and high volatility and also the assosiated risk levels. make sure to mention whether the stock would be short term or long term. Also make sure that you only show stocks that you believe the user should invest in. Also make sure to mention in a sentence that if they have any inquiries about a specific stock they can ask about it in the other box. Thank you. Make sure not to list out the syntax requirements we gave you and the header in the output. ",
+                    "content": "What are future lucrative stocks and why? Only give a bullet point list with short and simple sentences. Give us 3 sections, low, moderate, and high volatility and also the assosiated risk levels. make sure to mention whether the stock would be short term or long term. Also make sure that you only show stocks that you believe the user should invest in. Only mention stocks on NASDAQ. Also make sure to mention in a sentence that if they have any inquiries about a specific stock they can ask about it in the other box. Write it in the form of <li> tags from Javascript. Make sure not to list out the syntax requirements we gave you and the header in the output. Thank you. ",
                 },
             ],
             temperature=0.7,
